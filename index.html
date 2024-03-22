@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1> ola mundo</h1>
+<body>
+    <header>
+        exercicios html
+    </header>
+          <nav>
+            <a href="Exercicios/teste.html">00 - teste</a>
+          </nav>
+          <section id=>"conteudo"</section>""></section>
+          <footer>
+            <br>
+            Curso de web moderno
+
+          </footer>
+          <script>
+            document.querySelectorAll('a').forEach(link => {
+               
+               link.onclick = function(e) {
+                    e.preventDefault()
+                    fetch(link.href)
+                    const conteudo = document.getElementById('conteudo') 
+                    .then(resp => resp.text())
+                    .then(html=> coneteudo.innerHTML = html)
+                }
+            })
+          </script>
+</body>
+</html>
